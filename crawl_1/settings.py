@@ -90,4 +90,4 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 DUPEFILTER_CLASS='scrapy.dupefilters.RFPDupeFilter'
-IMAGES_STORE = '/Users/luke/Pictures/python'
+IMAGES_STORE = 'E:\project\git_project\crawl_1\pictures'
