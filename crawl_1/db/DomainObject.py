@@ -89,3 +89,63 @@ class CellInfo(Base):
         self.add_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         self.modify_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         self.project_id = fields['project_id']
+
+class DailyTradeDetail(Base):
+    __tablename__ = 'daily_trade_detail'
+
+    id = Column(Integer,primary_key=True)
+    town_name = Column(String)
+
+    reserve_num = Column(Integer)
+    reserve_area = Column(Float)
+    reserve_house_num = Column(Integer)
+    reserve_house_area = Column(Float)
+    reserve_money = Column(Float)
+    reserve_house_money = Column(Float)
+
+    trade_num = Column(Integer)
+    trade_area = Column(Float)
+    trade_house_num = Column(Integer)
+    trade_house_area = Column(Float)
+    trade_money = Column(Float)
+    trade_house_money = Column(Float)
+
+    record_num = Column(Integer)
+    record_area = Column(Float)
+    record_house_num = Column(Integer)
+    record_house_area = Column(Float)
+    record_money = Column(Float)
+    record_house_money = Column(Float)
+
+    add_date = Column(Date)
+    modify_date = Column(Date)
+    project_name = Column(String)
+
+    def __int__(self,**fields):
+        self.town_name = fields['town_name']
+
+        self.reserve_num = fields['reserve_num']
+        self.reserve_area = fields['reserve_area']
+        self.reserve_house_num = fields['reserve_house_num']
+        self.reserve_house_area = fields['reserve_house_area']
+        self.reserve_money = fields['reserve_money']
+        self.reserve_house_money = fields['reserve_house_money']
+
+        self.trade_num = fields['trade_num']
+        self.trade_area = fields['trade_area']
+        self.trade_house_num = fields['trade_house_num']
+        self.trade_house_area = fields['trade_house_area']
+        self.trade_money = fields['trade_money']
+        self.trade_house_money = fields['trade_house_money']
+
+        self.record_num = fields['record_num']
+        self.record_area = fields['record_area']
+        self.record_house_num = fields['record_house_num']
+        self.record_house_area = fields['record_house_area']
+        self.record_money = fields['record_money']
+        self.record_house_money = fields['record_house_money']
+
+        self.add_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        self.modify_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        self.project_name = fields['project_name']
+

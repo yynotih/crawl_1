@@ -49,3 +49,30 @@ CREATE TABLE `real_estate_daily_trade` (
   `modify_date` date DEFAULT NULL COMMENT '记录修改时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8 COMMENT='房地产每日签约情况';
+
+CREATE TABLE `daily_trade_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `town_name` varchar(45) NOT NULL COMMENT '乡镇名称',
+  `reserve_num` int(11) DEFAULT NULL COMMENT '预订数量',
+  `reserve_area` float DEFAULT NULL COMMENT '预订面积',
+  `trade_num` int(11) DEFAULT NULL COMMENT '签约数量',
+  `trade_area` float DEFAULT NULL COMMENT '签约面积',
+  `reserve_house_num` int(11) DEFAULT NULL COMMENT '住宅预订数量',
+  `trade_house_num` int(11) DEFAULT NULL COMMENT '住宅签约数量',
+  `reserve_house_area` float DEFAULT NULL COMMENT '住宅预订面积',
+  `trade_house_area` float DEFAULT NULL COMMENT '住宅签约面积',
+  `record_num` int(11) DEFAULT NULL COMMENT '备案数量',
+  `record_area` float DEFAULT NULL COMMENT '备案面积',
+  `record_house_num` int(11) DEFAULT NULL COMMENT '住宅备案数量',
+  `record_house_area` float DEFAULT NULL COMMENT '住宅备案面积',
+  `reserve_money` float DEFAULT NULL COMMENT '预订金额',
+  `reserve_house_money` float DEFAULT NULL COMMENT '住宅预订金额',
+  `trade_money` float DEFAULT NULL COMMENT '签约金额',
+  `trade_house_money` float DEFAULT NULL COMMENT '住宅签约金额',
+  `record_money` float DEFAULT NULL COMMENT '备案金额',
+  `record_house_money` float DEFAULT NULL COMMENT '住宅备案金额',
+  `add_date` date DEFAULT NULL,
+  `modify_date` date DEFAULT NULL,
+  `project_name` varchar(255) DEFAULT NULL COMMENT '项目名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
